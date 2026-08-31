@@ -20,3 +20,10 @@ endif()
 if(MSVC)
   set(CMAKE_STATIC_LIBRARY_PREFIX "lib")
 endif()
+
+
+# libwebm
+set(ENABLE_WEBMINFO OFF CACHE BOOL "" FORCE)
+set(ENABLE_SAMPLE_PROGRAMS OFF CACHE BOOL "" FORCE)
+add_subdirectory(libwebm)
+set_target_properties(webm PROPERTIES DEBUG_POSTFIX "d")

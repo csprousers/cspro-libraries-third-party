@@ -7,6 +7,8 @@ cd third_party
 rem update the licenses
 set LICENSES_DIR=%CSPRO_DIR%\build-tools\Licenses\Licenses
 
+copy /Y libwebm\LICENSE.TXT %LICENSES_DIR%\libwebm.txt
+
 
 rem build the libraries
 cmake --preset windows-x64
