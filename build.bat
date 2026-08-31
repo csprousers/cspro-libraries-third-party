@@ -8,6 +8,7 @@ rem update the licenses
 set LICENSES_DIR=%CSPRO_DIR%\build-tools\Licenses\Licenses
 
 copy /Y libwebm\LICENSE.TXT %LICENSES_DIR%\libwebm.txt
+copy /Y libwebp\COPYING %LICENSES_DIR%\libwebp.txt
 
 
 rem build the libraries
