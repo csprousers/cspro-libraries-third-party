@@ -22,14 +22,22 @@ if(MSVC)
 endif()
 
 
+
+################################################################################
 # libwebm
+################################################################################
+
 set(ENABLE_WEBMINFO OFF CACHE BOOL "" FORCE)
 set(ENABLE_SAMPLE_PROGRAMS OFF CACHE BOOL "" FORCE)
 add_subdirectory(libwebm)
 set_target_properties(webm PROPERTIES DEBUG_POSTFIX "d")
 
 
+
+################################################################################
 # libwebp
+################################################################################
+
 set(WEBP_BUILD_ANIM_UTILS OFF CACHE BOOL "" FORCE)
 set(WEBP_BUILD_CWEBP OFF CACHE BOOL "" FORCE)
 set(WEBP_BUILD_DWEBP OFF CACHE BOOL "" FORCE)
@@ -43,3 +51,32 @@ set(WEBP_BUILD_EXTRAS OFF CACHE BOOL "" FORCE)
 add_subdirectory(libwebp)
 set_target_properties(sharpyuv PROPERTIES DEBUG_POSTFIX "d")
 set_target_properties(webp PROPERTIES DEBUG_POSTFIX "d")
+
+
+
+# These libraries are only needed for the build tools, which are only built for Windows x64.
+if(CSPRO_ADDITIONAL_TARGET STREQUAL "build-tools")
+
+    ################################################################################
+    # pcre2
+    # (prerequisite for editorconfig-core-c)
+    ################################################################################
+
+    set(PCRE2_BUILD_PCRE2GREP OFF CACHE BOOL "" FORCE)
+    set(PCRE2_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+    add_subdirectory(pcre2)
+
+
+
+    ################################################################################
+    # editorconfig-core-c
+    ################################################################################
+
+    file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/editorconfig-core-c-overrides/" DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/editorconfig-core-c/")
+    set(PCRE2_INCLUDE_DIRS "${CMAKE_CURRENT_BINARY_DIR}/pcre2/interface" CACHE PATH "" FORCE)
+    set(PCRE2_LIBRARIES pcre2-8-static CACHE STRING "" FORCE)
+    set(BUILD_DOCUMENTATION OFF CACHE BOOL "" FORCE)
+    add_subdirectory(editorconfig-core-c)
+    set_target_properties(editorconfig_static PROPERTIES DEBUG_POSTFIX "d")
+
+endif()
