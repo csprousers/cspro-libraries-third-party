@@ -33,6 +33,7 @@
         "strategy": "set"
       },
       "cacheVariables": {
+        "CMAKE_INSTALL_BINDIR": "bin/windows-x64",
         "CMAKE_INSTALL_LIBDIR": "lib/windows-x64",
         "CSPRO_ADDITIONAL_TARGET":  "build-tools"
       }
@@ -49,6 +50,7 @@
         "strategy": "set"
       },
       "cacheVariables": {
+        "CMAKE_INSTALL_BINDIR": "bin/windows-x86",
         "CMAKE_INSTALL_LIBDIR": "lib/windows-x86"
       }
     },

@@ -10,6 +10,7 @@ set LICENSES_DIR=%CSPRO_DIR%\build-tools\Licenses\Licenses
 copy /Y editorconfig-core-c\LICENSE %LICENSES_DIR%\EditorConfig.txt
 copy /Y libwebm\LICENSE.TXT %LICENSES_DIR%\libwebm.txt
 copy /Y libwebp\COPYING %LICENSES_DIR%\libwebp.txt
+copy /Y md4c\LICENSE.md %LICENSES_DIR%\md4c.txt
 
 
 rem build the libraries

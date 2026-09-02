@@ -19,6 +19,8 @@ endif()
 # Have the Windows libraries begin with "lib" (as the Android libraries do).
 if(MSVC)
   set(CMAKE_STATIC_LIBRARY_PREFIX "lib")
+  set(CMAKE_SHARED_LIBRARY_PREFIX "lib")
+  set(CMAKE_IMPORT_LIBRARY_PREFIX "lib")
 endif()
 
 
@@ -51,6 +53,24 @@ set(WEBP_BUILD_EXTRAS OFF CACHE BOOL "" FORCE)
 add_subdirectory(libwebp)
 set_target_properties(sharpyuv PROPERTIES DEBUG_POSTFIX "d")
 set_target_properties(webp PROPERTIES DEBUG_POSTFIX "d")
+
+
+
+################################################################################
+# md4c
+################################################################################
+
+if(MSVC)
+    set(BUILD_SHARED_LIBS ON CACHE BOOL "" FORCE)
+endif()
+
+set(BUILD_MD2HTML_EXECUTABLE OFF CACHE BOOL "" FORCE)
+add_subdirectory(md4c)
+set_target_properties(md4c PROPERTIES DEBUG_POSTFIX "d")
+
+if(MSVC)
+    set(BUILD_SHARED_LIBS OFF CACHE BOOL "" FORCE)
+endif()
 
 
 
