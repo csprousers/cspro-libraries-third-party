@@ -13,3 +13,6 @@
 [submodule "third_party/md4c"]
 	path = third_party/md4c
 	url = https://github.com/csprousers/cspro-libraries-fork-md4c
+[submodule "third_party/pugixml"]
+	path = third_party/pugixml
+	url = https://github.com/zeux/pugixml
