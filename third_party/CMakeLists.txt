@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.25)
+cmake_minimum_required(VERSION 4.3...${CMAKE_VERSION})
 project(CSPro_third_party_libraries C CXX)
 
 
@@ -84,6 +84,19 @@ add_subdirectory(pugixml)
 set_target_properties(pugixml-static PROPERTIES DEBUG_POSTFIX "d")
 install(CODE "file(RENAME \"${CSPRO_INCLUDE_DIR}/pugiconfig.hpp\" \"${CSPRO_INCLUDE_DIR}/pugixml/pugiconfig.hpp\")")
 install(CODE "file(RENAME \"${CSPRO_INCLUDE_DIR}/pugixml.hpp\" \"${CSPRO_INCLUDE_DIR}/pugixml/pugixml.hpp\")")
+
+
+
+################################################################################
+# yaml-cpp
+################################################################################
+
+set(YAML_CPP_BUILD_CONTRIB OFF CACHE BOOL "" FORCE)
+set(YAML_CPP_BUILD_TOOLS OFF CACHE BOOL "" FORCE)
+set(YAML_CPP_INSTALL ON CACHE BOOL "" FORCE)
+set(YAML_CPP_FORMAT_SOURCE OFF CACHE BOOL "" FORCE)
+add_subdirectory(yaml-cpp)
+set_target_properties(yaml-cpp PROPERTIES DEBUG_POSTFIX "d")
 
 
 
