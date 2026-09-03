@@ -29,6 +29,32 @@ endif()
 
 
 ################################################################################
+# zlib
+################################################################################
+
+# other libraries depend on zlib so set the paths of the built zlib library
+set(ZLIB_INCLUDE_DIR "${CMAKE_INSTALL_INCLUDEDIR}/zlib" CACHE PATH "" FORCE)
+set(ZLIB_LIBRARY "${CMAKE_INSTALL_LIBDIR}" CACHE PATH "" FORCE)
+
+set(CMAKE_INSTALL_INCLUDEDIR "${ZLIB_INCLUDE_DIR}" CACHE STRING "" FORCE)
+
+if(WIN32)
+    set(ZLIB_BUILD_STATIC OFF CACHE BOOL "" FORCE)
+    set(ZLIB_BUILD_SHARED ON CACHE BOOL "" FORCE)
+else()
+    set(ZLIB_BUILD_STATIC ON CACHE BOOL "" FORCE)
+    set(ZLIB_BUILD_SHARED OFF CACHE BOOL "" FORCE)
+endif()
+
+set(ZLIB_BUILD_TESTING OFF CACHE BOOL "" FORCE)
+add_subdirectory(zlib)
+set_target_properties(zlibstatic PROPERTIES DEBUG_POSTFIX "d")
+
+set(CMAKE_INSTALL_INCLUDEDIR "${CSPRO_INSTALL_INCLUDEDIR}" CACHE STRING "" FORCE)
+
+
+
+################################################################################
 # libwebm
 ################################################################################
 

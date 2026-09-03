@@ -13,6 +13,7 @@ copy /Y libwebp\COPYING %LICENSES_DIR%\libwebp.txt
 copy /Y md4c\LICENSE.md %LICENSES_DIR%\md4c.txt
 copy /Y pugixml\LICENSE.md %LICENSES_DIR%\pugixml.txt
 copy /Y yaml-cpp\LICENSE %LICENSES_DIR%\yaml-cpp.txt
+copy /Y zlib\LICENSE %LICENSES_DIR%\zlib.txt
 
 
 rem build the libraries
