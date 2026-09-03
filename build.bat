@@ -11,6 +11,7 @@ copy /Y bzip2\LICENSE %LICENSES_DIR%\bzip2.txt
 copy /Y CHMLib\COPYING %LICENSES_DIR%\CHMLib.txt
 copy /Y editorconfig-core-c\LICENSE %LICENSES_DIR%\EditorConfig.txt
 copy /Y gumbo-parser\COPYING %LICENSES_DIR%\gumbo-parser.txt
+copy /Y libexif\COPYING %LICENSES_DIR%\libexif.txt
 copy /Y libwebm\LICENSE.TXT %LICENSES_DIR%\libwebm.txt
 copy /Y libwebp\COPYING %LICENSES_DIR%\libwebp.txt
 copy /Y md4c\LICENSE.md %LICENSES_DIR%\md4c.txt
