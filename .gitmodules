@@ -1,6 +1,9 @@
 [submodule "third_party/bzip2"]
 	path = third_party/bzip2
 	url = https://github.com/csprousers/cspro-libraries-fork-bzip2
+[submodule "third_party/CHMLib"]
+	path = third_party/CHMLib
+	url = https://github.com/csprousers/cspro-libraries-fork-CHMLib
 [submodule "third_party/editorconfig-core-c"]
 	path = third_party/editorconfig-core-c
 	url = https://github.com/editorconfig/editorconfig-core-c

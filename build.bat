@@ -8,6 +8,7 @@ rem update the licenses
 set LICENSES_DIR=%CSPRO_DIR%\build-tools\Licenses\Licenses
 
 copy /Y bzip2\LICENSE %LICENSES_DIR%\bzip2.txt
+copy /Y CHMLib\COPYING %LICENSES_DIR%\CHMLib.txt
 copy /Y editorconfig-core-c\LICENSE %LICENSES_DIR%\EditorConfig.txt
 copy /Y gumbo-parser\COPYING %LICENSES_DIR%\gumbo-parser.txt
 copy /Y libwebm\LICENSE.TXT %LICENSES_DIR%\libwebm.txt
