@@ -32,7 +32,7 @@ endif()
 # zlib
 ################################################################################
 
-# other libraries depend on zlib so set the paths of the built zlib library
+# other libraries depend on zlib
 set(ZLIB_INCLUDE_DIR "${CMAKE_INSTALL_INCLUDEDIR}/zlib" CACHE PATH "" FORCE)
 set(ZLIB_LIBRARY "${CMAKE_INSTALL_LIBDIR}" CACHE PATH "" FORCE)
 
@@ -48,7 +48,10 @@ endif()
 
 set(ZLIB_BUILD_TESTING OFF CACHE BOOL "" FORCE)
 add_subdirectory(zlib)
-set_target_properties(zlibstatic PROPERTIES DEBUG_POSTFIX "d")
+
+if(NOT WIN32)
+    set_target_properties(zlibstatic PROPERTIES DEBUG_POSTFIX "d")
+endif()
 
 set(CMAKE_INSTALL_INCLUDEDIR "${CSPRO_INSTALL_INCLUDEDIR}" CACHE STRING "" FORCE)
 
@@ -57,6 +60,10 @@ set(CMAKE_INSTALL_INCLUDEDIR "${CSPRO_INSTALL_INCLUDEDIR}" CACHE STRING "" FORCE
 ################################################################################
 # bzip2
 ################################################################################
+
+# other libraries can use bzip2
+set(BZIP2_INCLUDE_DIR "${CMAKE_INSTALL_INCLUDEDIR}/bzip2" CACHE PATH "" FORCE)
+set(BZIP2_LIBRARIES "${CMAKE_INSTALL_LIBDIR}" CACHE PATH "" FORCE)
 
 add_subdirectory(bzip2)
 set_target_properties(bzip2 PROPERTIES DEBUG_POSTFIX "d")
