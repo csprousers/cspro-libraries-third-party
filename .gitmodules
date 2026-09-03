@@ -1,6 +1,9 @@
 [submodule "third_party/editorconfig-core-c"]
 	path = third_party/editorconfig-core-c
 	url = https://github.com/editorconfig/editorconfig-core-c
+[submodule "third_party/gumbo-parser"]
+	path = third_party/gumbo-parser
+	url = https://github.com/csprousers/cspro-libraries-fork-gumbo-parser
 [submodule "third_party/libwebm"]
 	path = third_party/libwebm
 	url = https://github.com/webmproject/libwebm.git
