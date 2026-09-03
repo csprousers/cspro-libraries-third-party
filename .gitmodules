@@ -1,3 +1,6 @@
+[submodule "third_party/bzip2"]
+	path = third_party/bzip2
+	url = https://github.com/csprousers/cspro-libraries-fork-bzip2
 [submodule "third_party/editorconfig-core-c"]
 	path = third_party/editorconfig-core-c
 	url = https://github.com/editorconfig/editorconfig-core-c
@@ -6,16 +9,16 @@
 	url = https://github.com/csprousers/cspro-libraries-fork-gumbo-parser
 [submodule "third_party/libwebm"]
 	path = third_party/libwebm
-	url = https://github.com/webmproject/libwebm.git
+	url = https://github.com/webmproject/libwebm
 [submodule "third_party/libwebp"]
 	path = third_party/libwebp
-	url = https://github.com/webmproject/libwebp.git
-[submodule "third_party/pcre2"]
-	path = third_party/pcre2
-	url = https://github.com/PCRE2Project/pcre2
+	url = https://github.com/webmproject/libwebp
 [submodule "third_party/md4c"]
 	path = third_party/md4c
 	url = https://github.com/csprousers/cspro-libraries-fork-md4c
+[submodule "third_party/pcre2"]
+	path = third_party/pcre2
+	url = https://github.com/PCRE2Project/pcre2
 [submodule "third_party/pugixml"]
 	path = third_party/pugixml
 	url = https://github.com/zeux/pugixml
@@ -25,6 +28,3 @@
 [submodule "third_party/zlib"]
 	path = third_party/zlib
 	url = https://github.com/madler/zlib
-[submodule "third_party/bzip2"]
-	path = third_party/bzip2
-	url = https://github.com/csprousers/cspro-libraries-fork-bzip2.git
