@@ -4,6 +4,9 @@
 [submodule "third_party/CHMLib"]
 	path = third_party/CHMLib
 	url = https://github.com/csprousers/cspro-libraries-fork-CHMLib
+[submodule "third_party/curl"]
+	path = third_party/curl
+	url = https://github.com/csprousers/cspro-libraries-fork-curl
 [submodule "third_party/editorconfig-core-c"]
 	path = third_party/editorconfig-core-c
 	url = https://github.com/editorconfig/editorconfig-core-c

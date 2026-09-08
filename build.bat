@@ -9,6 +9,7 @@ set LICENSES_DIR=%CSPRO_DIR%\build-tools\Licenses\Licenses
 
 copy /Y bzip2\LICENSE %LICENSES_DIR%\bzip2.txt
 copy /Y CHMLib\COPYING %LICENSES_DIR%\CHMLib.txt
+copy /Y curl\COPYING %LICENSES_DIR%\libcurl.txt
 copy /Y editorconfig-core-c\LICENSE %LICENSES_DIR%\EditorConfig.txt
 copy /Y gumbo-parser\COPYING %LICENSES_DIR%\gumbo-parser.txt
 copy /Y libexif\COPYING %LICENSES_DIR%\libexif.txt

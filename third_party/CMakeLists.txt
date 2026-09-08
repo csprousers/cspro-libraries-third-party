@@ -53,6 +53,9 @@ if(NOT WIN32)
     set_target_properties(zlibstatic PROPERTIES DEBUG_POSTFIX "d")
 endif()
 
+# zlib will be added as a global include directory
+include_directories("${CMAKE_INSTALL_PREFIX}/${ZLIB_INCLUDE_DIR}")
+
 set(CMAKE_INSTALL_INCLUDEDIR "${CSPRO_INSTALL_INCLUDEDIR}" CACHE STRING "" FORCE)
 
 
@@ -77,6 +80,40 @@ set_target_properties(bzip2 PROPERTIES DEBUG_POSTFIX "d")
 if(WIN32)
     add_subdirectory(CHMLib)
     set_target_properties(chm PROPERTIES DEBUG_POSTFIX "d")
+endif()
+
+
+
+################################################################################
+# curl
+################################################################################
+
+if(WIN32)
+    set(BUILD_CURL_EXE OFF CACHE BOOL "" FORCE)
+    set(BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+    set(BUILD_LIBCURL_DOCS OFF CACHE BOOL "" FORCE)
+    set(BUILD_MISC_DOCS OFF CACHE BOOL "" FORCE)
+    set(BUILD_TESTING OFF CACHE BOOL "" FORCE)
+    set(CURL_LTO ON CACHE BOOL "" FORCE)
+    set(IMPORT_LIB_SUFFIX "" CACHE STRING "" FORCE)
+    set(ENABLE_CURL_MANUAL OFF CACHE BOOL "" FORCE)
+    set(CURL_DISABLE_DICT ON CACHE BOOL "" FORCE)
+    set(CURL_DISABLE_GOPHER ON CACHE BOOL "" FORCE)
+    set(CURL_DISABLE_IMAP ON CACHE BOOL "" FORCE)
+    set(CURL_DISABLE_LDAP ON CACHE BOOL "" FORCE)
+    set(CURL_DISABLE_LDAPS ON CACHE BOOL "" FORCE)
+    set(CURL_DISABLE_MQTT ON CACHE BOOL "" FORCE)
+    set(CURL_DISABLE_POP3 ON CACHE BOOL "" FORCE)
+    set(CURL_DISABLE_RTSP ON CACHE BOOL "" FORCE)
+    set(CURL_DISABLE_SMB ON CACHE BOOL "" FORCE)
+    set(CURL_DISABLE_TELNET ON CACHE BOOL "" FORCE)
+    set(CURL_DISABLE_TFTP ON CACHE BOOL "" FORCE)
+    set(CURL_USE_LIBPSL OFF CACHE BOOL "" FORCE)
+    set(CURL_ZLIB ON CACHE BOOL "" FORCE)
+    set(CURL_USE_OPENSSL OFF CACHE BOOL "" FORCE)
+    set(CURL_USE_SCHANNEL ON CACHE BOOL "" FORCE)
+    add_subdirectory(curl)
+    set_target_properties(libcurl_static PROPERTIES DEBUG_POSTFIX "d")
 endif()
 
 
@@ -235,9 +272,6 @@ if(CSPRO_ADDITIONAL_TARGET STREQUAL "build-tools")
     set(USE_HTTPS "OFF" CACHE STRING "" FORCE)
     set(DEPRECATE_HARD ON CACHE BOOL "" FORCE)
     add_subdirectory(libgit2)
-    target_include_directories(libgit2 PRIVATE "${CMAKE_INSTALL_PREFIX}/${ZLIB_INCLUDE_DIR}")
-    target_include_directories(libgit2package PRIVATE "${CMAKE_INSTALL_PREFIX}/${ZLIB_INCLUDE_DIR}")
-    target_include_directories(util PRIVATE "${CMAKE_INSTALL_PREFIX}/${ZLIB_INCLUDE_DIR}")
     set_target_properties(libgit2package PROPERTIES DEBUG_POSTFIX "d")
 
     set(CMAKE_INSTALL_INCLUDEDIR "${CSPRO_INSTALL_INCLUDEDIR}" CACHE STRING "" FORCE)
