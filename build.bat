@@ -14,6 +14,7 @@ copy /Y gumbo-parser\COPYING %LICENSES_DIR%\gumbo-parser.txt
 copy /Y libexif\COPYING %LICENSES_DIR%\libexif.txt
 copy /Y libwebm\LICENSE.TXT %LICENSES_DIR%\libwebm.txt
 copy /Y libwebp\COPYING %LICENSES_DIR%\libwebp.txt
+copy /Y libxlsxwriter\License.txt %LICENSES_DIR%\libxlsxwriter.txt
 copy /Y md4c\LICENSE.md %LICENSES_DIR%\md4c.txt
 copy /Y miniz\LICENSE %LICENSES_DIR%\miniz.txt
 copy /Y pugixml\LICENSE.md %LICENSES_DIR%\pugixml.txt

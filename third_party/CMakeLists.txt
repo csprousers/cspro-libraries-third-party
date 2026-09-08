@@ -131,6 +131,16 @@ set_target_properties(webp PROPERTIES DEBUG_POSTFIX "d")
 
 
 ################################################################################
+# libxlsxwriter
+################################################################################
+
+set(USE_NO_MD5 ON CACHE BOOL "" FORCE)
+add_subdirectory(libxlsxwriter)
+set_target_properties(xlsxwriter PROPERTIES DEBUG_POSTFIX "d")
+
+
+
+################################################################################
 # md4c
 ################################################################################
 
