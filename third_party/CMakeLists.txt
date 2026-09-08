@@ -220,4 +220,26 @@ if(CSPRO_ADDITIONAL_TARGET STREQUAL "build-tools")
     add_subdirectory(editorconfig-core-c)
     set_target_properties(editorconfig_static PROPERTIES DEBUG_POSTFIX "d")
 
+
+
+    ################################################################################
+    # libgit2
+    ################################################################################
+
+    set(CMAKE_INSTALL_INCLUDEDIR "include/git2" CACHE STRING "" FORCE)
+
+    set(STATIC_CRT OFF CACHE BOOL "" FORCE)
+    set(BUILD_TESTS OFF CACHE BOOL "" FORCE)
+    set(BUILD_CLI OFF CACHE BOOL "" FORCE)
+    set(USE_SSH "OFF" CACHE STRING "" FORCE)
+    set(USE_HTTPS "OFF" CACHE STRING "" FORCE)
+    set(DEPRECATE_HARD ON CACHE BOOL "" FORCE)
+    add_subdirectory(libgit2)
+    target_include_directories(libgit2 PRIVATE "${CMAKE_INSTALL_PREFIX}/${ZLIB_INCLUDE_DIR}")
+    target_include_directories(libgit2package PRIVATE "${CMAKE_INSTALL_PREFIX}/${ZLIB_INCLUDE_DIR}")
+    target_include_directories(util PRIVATE "${CMAKE_INSTALL_PREFIX}/${ZLIB_INCLUDE_DIR}")
+    set_target_properties(libgit2package PROPERTIES DEBUG_POSTFIX "d")
+
+    set(CMAKE_INSTALL_INCLUDEDIR "${CSPRO_INSTALL_INCLUDEDIR}" CACHE STRING "" FORCE)
+
 endif()

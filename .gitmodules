@@ -13,6 +13,9 @@
 [submodule "third_party/libexif"]
 	path = third_party/libexif
 	url = https://github.com/csprousers/cspro-libraries-fork-libexif.git
+[submodule "third_party/libgit2"]
+	path = third_party/libgit2
+	url = https://github.com/libgit2/libgit2
 [submodule "third_party/libwebm"]
 	path = third_party/libwebm
 	url = https://github.com/webmproject/libwebm
