@@ -22,6 +22,9 @@
 [submodule "third_party/md4c"]
 	path = third_party/md4c
 	url = https://github.com/csprousers/cspro-libraries-fork-md4c
+[submodule "third_party/miniz"]
+	path = third_party/miniz
+	url = https://github.com/richgel999/miniz
 [submodule "third_party/pcre2"]
 	path = third_party/pcre2
 	url = https://github.com/PCRE2Project/pcre2
