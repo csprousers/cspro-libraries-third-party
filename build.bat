@@ -12,6 +12,7 @@ copy /Y CHMLib\COPYING %LICENSES_DIR%\CHMLib.txt
 copy /Y curl\COPYING %LICENSES_DIR%\libcurl.txt
 copy /Y editorconfig-core-c\LICENSE %LICENSES_DIR%\EditorConfig.txt
 copy /Y gumbo-parser\COPYING %LICENSES_DIR%\gumbo-parser.txt
+copy /Y gpac\COPYING %LICENSES_DIR%\GPAC.txt
 copy /Y libexif\COPYING %LICENSES_DIR%\libexif.txt
 copy /Y libgit2\COPYING %LICENSES_DIR%\libgit2.txt
 copy /Y libwebm\LICENSE.TXT %LICENSES_DIR%\libwebm.txt
