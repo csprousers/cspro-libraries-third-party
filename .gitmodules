@@ -9,7 +9,7 @@
 	url = https://github.com/csprousers/cspro-libraries-fork-curl
 [submodule "third_party/editorconfig-core-c"]
 	path = third_party/editorconfig-core-c
-	url = https://github.com/editorconfig/editorconfig-core-c
+	url = https://github.com/csprousers/cspro-libraries-fork-editorconfig-core-c
 [submodule "third_party/gpac"]
 	path = third_party/gpac
 	url = https://github.com/csprousers/cspro-libraries-fork-gpac

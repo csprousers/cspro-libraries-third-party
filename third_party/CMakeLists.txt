@@ -259,7 +259,6 @@ if(CSPRO_ADDITIONAL_TARGET STREQUAL "build-tools")
     # editorconfig-core-c
     ################################################################################
 
-    file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/editorconfig-core-c-overrides/" DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/editorconfig-core-c/")
     set(PCRE2_INCLUDE_DIRS "${CMAKE_CURRENT_BINARY_DIR}/pcre2/interface" CACHE PATH "" FORCE)
     set(PCRE2_LIBRARIES pcre2-8-static CACHE STRING "" FORCE)
     set(BUILD_DOCUMENTATION OFF CACHE BOOL "" FORCE)
