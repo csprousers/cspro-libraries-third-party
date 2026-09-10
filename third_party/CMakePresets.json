@@ -6,7 +6,7 @@
       "hidden": true,
       "cacheVariables": {
         "BUILD_SHARED_LIBS": "OFF",
-        "CMAKE_INSTALL_PREFIX": "$env{CSPRO_DIR}/third_party",
+        "CMAKE_INSTALL_PREFIX": "$env{CSPRO_DIR}/third_party/prebuilt",
         "CMAKE_INSTALL_INCLUDEDIR": "include"
       }
     },
