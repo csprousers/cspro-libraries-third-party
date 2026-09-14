@@ -5,6 +5,7 @@
       "name": "cspro",
       "hidden": true,
       "cacheVariables": {
+        "BUILD_STATIC_LIBS": "ON",
         "BUILD_SHARED_LIBS": "OFF",
         "CMAKE_INSTALL_PREFIX": "$env{CSPRO_DIR}/third_party/prebuilt",
         "CMAKE_INSTALL_INCLUDEDIR": "include"
