@@ -4,6 +4,9 @@
 [submodule "third_party/CHMLib"]
 	path = third_party/CHMLib
 	url = https://github.com/csprousers/cspro-libraries-fork-CHMLib
+[submodule "third_party/cryptopp-modern"]
+	path = third_party/cryptopp-modern
+	url = https://github.com/cryptopp-modern/cryptopp-modern
 [submodule "third_party/curl"]
 	path = third_party/curl
 	url = https://github.com/csprousers/cspro-libraries-fork-curl

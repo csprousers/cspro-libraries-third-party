@@ -285,3 +285,17 @@ if(CSPRO_ADDITIONAL_TARGET STREQUAL "build-tools")
     set(CMAKE_INSTALL_INCLUDEDIR "${CSPRO_INSTALL_INCLUDEDIR}" CACHE STRING "" FORCE)
 
 endif()
+
+
+
+################################################################################
+# Goose Nest libraries
+################################################################################
+
+    ################################################################################
+    # cryptopp-modern
+    ################################################################################
+
+    set(CRYPTOPP_BUILD_TESTING OFF CACHE BOOL "" FORCE)
+    add_subdirectory(cryptopp-modern)
+    set_target_properties(cryptopp PROPERTIES DEBUG_POSTFIX "d")
