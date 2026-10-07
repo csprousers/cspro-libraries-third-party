@@ -28,6 +28,13 @@ if not exist "%SCINTILLA_DIR%" (
     exit /B
 )
 
+set ZEDITO_DIR=%CSPRO_DIR%\cspro\zEditO
+
+if not exist "%ZEDITO_DIR%" (
+    echo The zEditO directory does not exist: %ZEDITO_DIR%
+    exit /B
+)
+
 
 rem --------------------------------
 rem --  Lexilla --------------------
@@ -51,3 +58,12 @@ xcopy /-I /Y scintilla\License.txt %LICENSES_DIR%\Scintilla.txt
 xcopy /I /U /Y scintilla\include\ %SCINTILLA_DIR%\include\
 xcopy /I /U /Y scintilla\src\ %SCINTILLA_DIR%\src\
 xcopy /I /U /Y scintilla\win32\ %SCINTILLA_DIR%\win32\
+
+
+rem --------------------------------
+rem --  Scintilla MFC wrappers -----
+rem --------------------------------
+
+echo Copying Scintilla MFC wrappers
+
+xcopy /I /U /Y scintilla-wrappers\ %ZEDITO_DIR%\

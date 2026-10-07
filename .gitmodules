@@ -4,6 +4,9 @@
 [submodule "editor/scintilla"]
 	path = editor/scintilla
 	url = https://github.com/csprousers/cspro-libraries-fork-scintilla
+[submodule "editor/scintilla-wrappers"]
+	path = editor/scintilla-wrappers
+	url = https://github.com/csprousers/cspro-libraries-fork-scintilla-wrappers
 [submodule "third_party/bzip2"]
 	path = third_party/bzip2
 	url = https://github.com/csprousers/cspro-libraries-fork-bzip2
