@@ -36,6 +36,18 @@ rem --------------------------------
 echo Copying Lexilla
 
 rem no license to copy as it is the same as Scintilla's
-xcopy /IKY lexilla\include %SCINTILLA_DIR%\include\
-xcopy /IKY lexilla\lexers %SCINTILLA_DIR%\lexers\
-xcopy /IKY lexilla\lexlib %SCINTILLA_DIR%\lexlib\
+xcopy /I /U /Y lexilla\include\ %SCINTILLA_DIR%\include\
+xcopy /I /U /Y lexilla\lexers\ %SCINTILLA_DIR%\lexers\
+xcopy /I /U /Y lexilla\lexlib\ %SCINTILLA_DIR%\lexlib\
+
+
+rem --------------------------------
+rem --  Scintilla ------------------
+rem --------------------------------
+
+echo Copying Scintilla
+
+xcopy /-I /Y scintilla\License.txt %LICENSES_DIR%\Scintilla.txt
+xcopy /I /U /Y scintilla\include\ %SCINTILLA_DIR%\include\
+xcopy /I /U /Y scintilla\src\ %SCINTILLA_DIR%\src\
+xcopy /I /U /Y scintilla\win32\ %SCINTILLA_DIR%\win32\
