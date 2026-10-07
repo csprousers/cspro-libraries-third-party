@@ -1,3 +1,6 @@
+[submodule "editor/lexilla"]
+	path = editor/lexilla
+	url = https://github.com/csprousers/cspro-libraries-fork-lexilla
 [submodule "third_party/bzip2"]
 	path = third_party/bzip2
 	url = https://github.com/csprousers/cspro-libraries-fork-bzip2

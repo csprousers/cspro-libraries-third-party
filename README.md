@@ -31,4 +31,13 @@ should be included as part of the prebuilt library releases.
 
 ## Third-Party Library Forks
 
-Several third-party libraries are forked using the naming convension *cspro-libraries-fork-[original-repository-name]*.
+Several third-party libraries are forked using the naming convention *cspro-libraries-fork-[original-repository-name]*.
+
+
+## Non-Prebuilt Libraries
+
+This repository also links to submodules that contain forked third-party libraries with CSPro-specific modifications.
+These are built as part of the CSPro solution, not prebuilt. The libraries are in the following directories, each
+containing scripts to copy the appropriate files into the CSPro solution:
+
+* *editor*: libraries used for CSPro's logic editor.
