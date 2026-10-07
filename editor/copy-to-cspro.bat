@@ -66,4 +66,5 @@ rem --------------------------------
 
 echo Copying Scintilla MFC wrappers
 
+xcopy /-I /Y scintilla-wrappers\LICENSE "%LICENSES_DIR%\ScintillaCtrl, ScintillaView.txt"
 xcopy /I /U /Y scintilla-wrappers\ %ZEDITO_DIR%\
